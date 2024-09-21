@@ -3,11 +3,15 @@ guid: 413986c4a668c374d8de72a47621b531
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   serializedVersion: 10
 =======
   serializedVersion: 13
 >>>>>>> main
+=======
+  serializedVersion: 13
+>>>>>>> Stashed changes
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -24,18 +28,24 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
 =======
+=======
+>>>>>>> Stashed changes
     flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
   ignoreMipmapLimit: 0
+<<<<<<< Updated upstream
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -45,6 +55,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     aniso: -1
     mipBias: -100
@@ -52,6 +63,10 @@ TextureImporter:
     aniso: 1
     mipBias: 0
 >>>>>>> main
+=======
+    aniso: 1
+    mipBias: 0
+>>>>>>> Stashed changes
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -63,11 +78,15 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   spritePixelsToUnits: 100
 =======
   spritePixelsToUnits: 8
 >>>>>>> main
+=======
+  spritePixelsToUnits: 8
+>>>>>>> Stashed changes
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,11 +95,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
 =======
+=======
+>>>>>>> Stashed changes
   flipbookRows: 1
   flipbookColumns: 1
   maxTextureSizeSet: 0
@@ -90,7 +112,10 @@ TextureImporter:
   applyGammaDecoding: 1
   swizzle: 50462976
   cookieLightType: 1
+<<<<<<< Updated upstream
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -102,10 +127,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     ignorePlatformSupport: 0
 >>>>>>> main
+=======
+    ignorePlatformSupport: 0
+>>>>>>> Stashed changes
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -118,10 +147,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     ignorePlatformSupport: 0
 >>>>>>> main
+=======
+    ignorePlatformSupport: 0
+>>>>>>> Stashed changes
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -137,6 +170,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   spritePackingTag: 
   pSDRemoveMatte: 0
@@ -146,6 +180,11 @@ TextureImporter:
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
 >>>>>>> main
+=======
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

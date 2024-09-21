@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+<<<<<<< Updated upstream
 
     public CharacterController2D controller;
 
@@ -12,10 +13,18 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+=======
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+>>>>>>> Stashed changes
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
@@ -42,3 +51,8 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
     }
 }
+=======
+        
+    }
+}
+>>>>>>> Stashed changes

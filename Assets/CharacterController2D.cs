@@ -1,12 +1,16 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 using UnityEditor;
 =======
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     [SerializeField] private float m_JumpForce = 400f;                          
     [Range(0, 1)][SerializeField] private float m_CrouchSpeed = .36f;          
@@ -205,6 +209,8 @@ public class CharacterController2D : MonoBehaviour
     }
 }
 =======
+=======
+>>>>>>> Stashed changes
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
@@ -346,4 +352,7 @@ public class CharacterController2D : MonoBehaviour
 		transform.localScale = theScale;
 	}
 }
+<<<<<<< Updated upstream
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
