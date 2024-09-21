@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementScene2 : MonoBehaviour
+public class PlayerMovementSouris : MonoBehaviour
 {
     public CharacterController2D controller;  // Contrôleur du personnage
     public Animator animator;  // Animator pour les animations
