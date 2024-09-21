@@ -24,10 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (jump == true)
-            {
-                doubleJump = true;
-            }
             jump = true;
         }
 

@@ -127,15 +127,44 @@ public class CharacterController2D : MonoBehaviour
                 // ... flip the player.
                 Flip();
             }
+        } else if (!m_Grounded)
+        {
+            Debug.Log(m_Rigidbody2D.velocity.x);
+            if (move > 0)
+            {
+                // ... flip the player.
+                if(m_Rigidbody2D.velocity.x < 3)
+                {
+                    m_Rigidbody2D.AddForce(new Vector2(20f, 0f));
+                }
+                if( !m_FacingRight)
+                {
+                    Flip();
+                }
+            }
+            // Otherwise if the input is moving the player left and the player is facing right...
+            else if (move < 0)
+            {
+                if (m_Rigidbody2D.velocity.x > -3)
+                {
+                    m_Rigidbody2D.AddForce(new Vector2(-20f, 0f));
+                }
+                if (m_FacingRight)
+                {
+                    Flip();
+                }
+            }
         }
         // If the player should jump...
         if (m_Grounded && jump)
         {
             // Add a vertical force to the player.
+            Debug.Log("simple");
             m_Grounded = false; 
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-        } if (!m_Grounded && doubleJump)
+        } else if (!m_Grounded && jump)
         {
+            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
