@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DraggableItem : MonoBehaviour
@@ -39,4 +38,5 @@ public class DraggableItem : MonoBehaviour
         mouseScreenPos.z = mainCamera.nearClipPlane; // Distance de la caméra
         return mainCamera.ScreenToWorldPoint(mouseScreenPos);
     }
+
 }

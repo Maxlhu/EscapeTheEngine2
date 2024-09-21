@@ -1,12 +1,21 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class ShutDownValve : MonoBehaviour
 {
     public GameObject firstItemPrefab; // L'objet à obtenir
-    public GameObject firstMessageUI; // Référence à l'UI du message
     private bool isItemGranted = false; // Vérifie si l'objet a été accordé
-    public int levelState = 0;
+    public GameObject firstMessageUI; // Référence à l'UI du message
+
+    private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer
+    private BoxCollider2D boxCollider2D; // Reference to the BoxCollider2D
+
+    private void Start()
+    {
+        // Get references to the components on the same GameObject
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+    }
 
     private void OnMouseDown()
     {
@@ -18,26 +27,14 @@ public class ShutDownValve : MonoBehaviour
 
     private void GrantItem()
     {
-        if (levelState == 0) {
-            // Instancier l'objet à la position de la vanne
-            Instantiate(firstItemPrefab, transform.position, Quaternion.identity);
-            isItemGranted = true;
-
-            // Afficher le message à l'utilisateur
-            firstMessageUI.SetActive(true);
-            StartCoroutine(HideMessageAfterDelay(10f)); // Appeler la coroutine avec un délai de 10 secondes
-        }
-        if (levelState == 1) {
-            //// Instancier l'objet à la position de la vanne
-            //Instantiate(firstItemPrefab, transform.position, Quaternion.identity);
-            //isItemGranted = true;
-
-            //// Afficher le message à l'utilisateur
-            //firstMessageUI.SetActive(true);
-            //StartCoroutine(HideMessageAfterDelay(10f)); // Appeler la coroutine avec un délai de 10 secondes
-        }
+        // Instancier l'objet à la position de la vanne
+        Instantiate(firstItemPrefab, transform.position, Quaternion.identity);
+        isItemGranted = true;
+        spriteRenderer.enabled = false;
+        boxCollider2D.enabled = false;
+        firstMessageUI.SetActive(true); // Afficher le message à l'utilisateur
+        StartCoroutine(HideMessageAfterDelay(10f)); // Appeler la coroutine avec un délai de 10 secondes
     }
-
 
     private IEnumerator HideMessageAfterDelay(float delay)
     {
@@ -45,9 +42,4 @@ public class ShutDownValve : MonoBehaviour
         firstMessageUI.SetActive(false); // Masquer le message après le délai
     }
 
-    public void AllowItemGranting()
-    {
-        isItemGranted = false; // Réinitialiser pour permettre de cliquer à nouveau
-        levelState++;
-    }
 }

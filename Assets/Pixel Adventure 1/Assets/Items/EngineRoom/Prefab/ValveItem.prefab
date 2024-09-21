@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330e81ce5a47b0d4e98bfac31d97c11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
+  firstMessageUI: {fileID: 4568707928846143525, guid: dc2b51f77d7d7344b8502579b71da453, type: 3}
 --- !u!61 &1591174023518158166
 BoxCollider2D:
   m_ObjectHideFlags: 0

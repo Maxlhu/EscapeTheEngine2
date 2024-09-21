@@ -14,13 +14,6 @@ public class FanCollision : MonoBehaviour
             {
                 // Destroy the item
                 Destroy(collision.gameObject);
-
-                // Make the shut down valve clickable again
-                ShutDownValve valveScript = valve.GetComponent<ShutDownValve>();
-                if (valveScript != null)
-                {
-                    valveScript.AllowItemGranting();
-                }
             }
         }
     }
