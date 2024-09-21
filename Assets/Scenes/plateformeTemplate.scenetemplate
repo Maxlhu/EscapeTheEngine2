@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: plateformeTemplate
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 40ef4145385f82b4fad367a4793690dc, type: 3}
+  templateName: PlateformSceneTemplate
+  description: "Template de d\xE9part avec plateformes et edge et background, fuck
+    around with it :D"
+  preview: {fileID: 0}
+  dependencies:
+  - dependency: {fileID: 2800000, guid: 552146dbb8bac6f449493bca4b69540f, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: 1e7b046322b521a4a8fdb854a623a321, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 9100000, guid: 1c22428ac3e7ebf4ebd3f317451f6a70, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: a69fb67ee63934b47906a8ff8bf7ef6a, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: ca6a66f8e2ae9c24c8c6b39c49206a0d, type: 3}
+    instantiationMode: 0
+  templatePipeline: {fileID: 0}
+  badge: {fileID: 0}
+  addToDefaults: 0
