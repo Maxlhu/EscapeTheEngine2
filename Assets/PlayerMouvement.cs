@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public CharacterController2D controller;
     public Animator animator;
 
@@ -15,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     bool doubleJump = false;
     bool crouch = false;
 
-    // Update is called once per frame
     void Update()
     {
 

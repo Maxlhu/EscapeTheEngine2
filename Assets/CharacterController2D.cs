@@ -73,7 +73,7 @@ public class CharacterController2D : MonoBehaviour
         {
             if (collidersRightSide[i].gameObject != gameObject)
             {
-                Debug.Log("RightOnWall");
+               // Debug.Log("RightOnWall");
                 onWall = true;
             }
         }

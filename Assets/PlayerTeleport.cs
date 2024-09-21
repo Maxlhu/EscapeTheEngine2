@@ -14,7 +14,6 @@ public class PlayerTeleport : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-
             if (hit.collider != null && activeTeleporters.Contains(hit.collider.gameObject))
             {
                 Teleporter teleporter = hit.collider.GetComponent<Teleporter>();
@@ -51,6 +50,4 @@ public class PlayerTeleport : MonoBehaviour
         Debug.Log("Active Teleporters: " + activeTeleporters);
 
     }
-
-
 }
