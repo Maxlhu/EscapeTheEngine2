@@ -139,7 +139,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 if(m_Rigidbody2D.velocity.x < 3)
                 {
-                    m_Rigidbody2D.AddForce(new Vector2(20f, 0f));
+                    m_Rigidbody2D.AddForce(new Vector2(0f, 0f));
                 }
                 if( !m_FacingRight)
                 {
@@ -162,7 +162,7 @@ public class CharacterController2D : MonoBehaviour
         if (m_Grounded && jump)
         {
             m_Grounded = false; 
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            m_Rigidbody2D.AddForce(new Vector2(20f, m_JumpForce));
         } else if (!m_Grounded && jump)
         {
             if (m_OnWall)
