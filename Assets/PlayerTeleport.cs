@@ -9,9 +9,11 @@ public class PlayerTeleport : MonoBehaviour
     public Animator animator;
     private Teleporter currentTeleporter;
 
+    private bool canTeleport = true;
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canTeleport)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
@@ -23,11 +25,18 @@ public class PlayerTeleport : MonoBehaviour
 
                 if (currentTeleporter != null)
                 {
+                    canTeleport = false;
                     animator.SetBool("isTeleporting", true);
                     Invoke("TeleportPlayer", 0.5f);
+                    Invoke("ResetTeleport", 0.5f);
                 }
             }
         }
+    }
+
+    void ResetTeleport()
+    {
+        canTeleport = true;
     }
 
     void TeleportPlayer()
