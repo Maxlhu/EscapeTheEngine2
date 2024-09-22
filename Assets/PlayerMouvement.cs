@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetBool("isMovingHorizontal", horizontalMove != 0f);
 
-        //Debug.Log(Input.GetAxisRaw("Horizontal"));
 
         if (Input.GetButtonDown("Jump"))
         {
