@@ -135,7 +135,7 @@ public class CharacterController2D : MonoBehaviour
         }
         else if (!m_Grounded)
         {
-            Debug.Log(m_Rigidbody2D.velocity.x);
+            //Debug.Log(m_Rigidbody2D.velocity.x);
             if (move > 0)
             {
                 if (m_Rigidbody2D.velocity.x < 3)

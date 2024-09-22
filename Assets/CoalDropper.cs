@@ -9,6 +9,7 @@ public class CoalDropper : MonoBehaviour
     public GameObject m_BuggedCoal2;
     public GameObject m_BuggedCoal3;
     public GameObject m_ultraBuggedCoal;
+    public Crasher m_Crasher;
     public int m_CoalCounter = 0;
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class CoalDropper : MonoBehaviour
                 break;
             case < 15:
                 Debug.Log("Crashed");
+                StartCoroutine(m_Crasher.crashGame());
                 break;
             default:
                 break;
