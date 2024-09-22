@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe46cd618e51aae4aa0cc825a00e32c3
+guid: f9300b200dba94a4d88b4f0aff4164c8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fan_animation_4_0
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 761
+        width: 836
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be19bbdd6cd64b4ba82da54d5a65846
+      internalID: 22575451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +127,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fan_animation_4_0: 22575451
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
