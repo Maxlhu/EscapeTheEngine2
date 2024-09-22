@@ -1196,7 +1196,7 @@ Animator:
   m_GameObject: {fileID: 416289888}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69d7c482e59c34b429982388a86f086a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 88804ebde9fe9f6439de802f6536a5a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1303,9 +1303,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 416289888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd01014031fac9a46b7aa7e2eb93d567, type: 3}
+  m_Script: {fileID: 11500000, guid: eeec51de44f29ea4eaa67d28a34872e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_JumpForce: 600
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_WhatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 0}
+  m_CeilingCheck: {fileID: 0}
+  m_LeftSideCheck: {fileID: 0}
+  m_RightSideCheck: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 0}
+  animator: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &416289894
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1347,7 +1369,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 7166236263522030466, guid: 552146dbb8bac6f449493bca4b69540f, type: 3}
+  m_Sprite: {fileID: 7166236263522030466, guid: e362bc6a7c79fce4db16d145d43a5550, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
