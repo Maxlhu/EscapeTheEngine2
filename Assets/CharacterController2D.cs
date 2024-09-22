@@ -4,27 +4,28 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-    [SerializeField] private float m_JumpForce = 400f;                          
-    [Range(0, 1)][SerializeField] private float m_CrouchSpeed = .36f;          
-    [Range(0, .3f)][SerializeField] private float m_MovementSmoothing = .05f;   
-    [SerializeField] private bool m_AirControl = false;                         
-    [SerializeField] private LayerMask m_WhatIsGround;                          
+    [SerializeField] private float m_JumpForce = 600f;
+    [Range(0, 1)][SerializeField] private float m_CrouchSpeed = .36f;
+    [Range(0, .3f)][SerializeField] private float m_MovementSmoothing = .05f;
+    [SerializeField] private bool m_AirControl = false;
+    [SerializeField] private LayerMask m_WhatIsGround;
     [SerializeField] private LayerMask m_WhatIsWall;
-    [SerializeField] private Transform m_GroundCheck;                           
-    [SerializeField] private Transform m_CeilingCheck;                          
-    [SerializeField] private Transform m_LeftSideCheck;                          
-    [SerializeField] private Transform m_RightSideCheck;                          
-    [SerializeField] private Collider2D m_CrouchDisableCollider;                
+    [SerializeField] private Transform m_GroundCheck;
+    [SerializeField] private Transform m_CeilingCheck;
+    [SerializeField] private Transform m_LeftSideCheck;
+    [SerializeField] private Transform m_RightSideCheck;
+    [SerializeField] private Collider2D m_CrouchDisableCollider;
+    public Animator animator;
 
-    const float k_GroundedRadius = .2f; 
-    const float k_OnWallRadius = .2f; 
-    private bool m_Grounded;            
+    const float k_GroundedRadius = .2f;
+    const float k_OnWallRadius = .2f;
+    private bool m_Grounded;
     private bool m_LeftOnWall;
     private bool m_OnWall;
     private bool m_doubleJumped;
-    const float k_CeilingRadius = .2f; 
+    const float k_CeilingRadius = .2f;
     private Rigidbody2D m_Rigidbody2D;
-    private bool m_FacingRight = true;  
+    private bool m_FacingRight = true;
     private Vector3 m_Velocity = Vector3.zero;
 
     [Header("Events")]
@@ -61,13 +62,12 @@ public class CharacterController2D : MonoBehaviour
             {
                 m_Grounded = true;
                 m_doubleJumped = false;
-                if (!wasGrounded)
-                    OnLandEvent.Invoke();
+                animator.SetBool("onGround", true);
             }
         }
 
         bool onWall = false;
-  
+
         Collider2D[] collidersRightSide = Physics2D.OverlapCircleAll(m_RightSideCheck.position, k_OnWallRadius, m_WhatIsWall);
         for (int i = 0; i < collidersRightSide.Length; i++)
         {
@@ -78,10 +78,23 @@ public class CharacterController2D : MonoBehaviour
             }
         }
         m_OnWall = onWall;
+        
+        if(m_Rigidbody2D.velocity.y < 0)
+        {
+            setAnimatorParam(false, true, false, false);
+        } 
+    }
+
+    private void setAnimatorParam(bool jumping, bool falling, bool doubleJumping, bool onGround)
+    {
+        animator.SetBool("jumping", jumping);
+        animator.SetBool("falling", falling);
+        animator.SetBool("doubleJumping", doubleJumping);
+        animator.SetBool("onGround", onGround);
     }
 
 
-    public void Move(float move, bool crouch, bool jump, bool doubleJump)
+    public void Move(float move, bool crouch, bool jump)
     {
         if (!crouch)
         {
@@ -132,16 +145,17 @@ public class CharacterController2D : MonoBehaviour
             {
                 Flip();
             }
-        } else if (!m_Grounded)
+        }
+        else if (!m_Grounded)
         {
-            Debug.Log(m_Rigidbody2D.velocity.x);
+            //Debug.Log(m_Rigidbody2D.velocity.x);
             if (move > 0)
             {
-                if(m_Rigidbody2D.velocity.x < 3)
+                if (m_Rigidbody2D.velocity.x < 3)
                 {
                     m_Rigidbody2D.AddForce(new Vector2(20f, 0f));
                 }
-                if( !m_FacingRight)
+                if (!m_FacingRight)
                 {
                     Flip();
                 }
@@ -161,9 +175,11 @@ public class CharacterController2D : MonoBehaviour
 
         if (m_Grounded && jump)
         {
-            m_Grounded = false; 
+            m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-        } else if (!m_Grounded && jump)
+            setAnimatorParam(true, false, false, false);
+        }
+        else if (!m_Grounded && jump)
         {
             if (m_OnWall)
             {
@@ -179,7 +195,8 @@ public class CharacterController2D : MonoBehaviour
             {
                 m_doubleJumped = true;
                 m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
-                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce)); 
+                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+                animator.SetBool("doubleJumping", true );
             }
         }
     }
