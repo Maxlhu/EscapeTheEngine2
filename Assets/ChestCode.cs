@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class ChestCode : MonoBehaviour
 {
@@ -11,11 +11,20 @@ public class ChestCode : MonoBehaviour
     public GameObject chestClosedSprite; // The sprite for the closed chest
     public GameObject chestOpenSprite; // The sprite for the open chest
 
+    public GameObject circle1;
+    public GameObject circle2;
+    public GameObject circle3;
+    public GameObject circle4;
+
     private void Start()
     {
         // Make sure the chest starts closed
         chestOpenSprite.SetActive(false);
         chestClosedSprite.SetActive(true);
+        circle1.SetActive(false);
+        circle2.SetActive(false);
+        circle3.SetActive(false);
+        circle4.SetActive(false);
     }
 
     // This function will be called whenever the player presses a digit button
@@ -28,12 +37,26 @@ public class ChestCode : MonoBehaviour
         // Append the digit to the enteredCode
         enteredCode += digit;
 
+        if (enteredCode.Length == 1)
+        {
+            circle1.SetActive(true);
+        }
+
+        if (enteredCode.Length == 2) {
+            circle2.SetActive(true);
+        }
+
+        if (enteredCode.Length == 3) { 
+            circle3.SetActive(true); 
+        }
+
         //// Update the display text
         //inputDisplay.text = enteredCode;
 
         // If the code is 4 digits long, check if it's correct
         if (enteredCode.Length == 4)
         {
+            circle4.SetActive(true);
             CheckCode();
         }
     }
@@ -68,6 +91,10 @@ public class ChestCode : MonoBehaviour
     // Resets the entered code
     private void ResetCode()
     {
+        circle1.SetActive(false);
+        circle2.SetActive(false);
+        circle3.SetActive(false);
+        circle4.SetActive(false);
         Debug.Log("Incorrect code, try again.");
         enteredCode = ""; // Clear the entered code
         //inputDisplay.text = ""; // Clear the display text

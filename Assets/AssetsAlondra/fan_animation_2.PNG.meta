@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: baa610aedfb8dc343a8ec45d31af97ea
-=======
 guid: c741b5da2ae195843837afe7f4d95dd4
->>>>>>> main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,11 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> main
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,9 +95,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: fan_animation_2_0
@@ -128,7 +117,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
->>>>>>> main
     outline: []
     physicsShape: []
     bones: []
@@ -139,12 +127,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
       fan_animation_2_0: 451913766
->>>>>>> main
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
