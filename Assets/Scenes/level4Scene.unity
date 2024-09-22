@@ -2655,6 +2655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valve: {fileID: 1180097424467734979, guid: e22360af70a0da04a817a46fe9cfad22, type: 3}
   brokenValve: {fileID: 1289456960}
+  animator: {fileID: 1498057989}
 --- !u!212 &1498057986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2716,7 +2717,7 @@ Transform:
   m_GameObject: {fileID: 1498057984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -2.72, z: -2}
+  m_LocalPosition: {x: 0.09, y: -2.72, z: 1}
   m_LocalScale: {x: 0.28191328, y: 0.28191328, z: 0.28191328}
   m_ConstrainProportionsScale: 0
   m_Children: []

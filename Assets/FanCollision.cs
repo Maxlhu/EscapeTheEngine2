@@ -4,6 +4,7 @@ public class FanCollision : MonoBehaviour
 {
     public GameObject valve; // Reference to the shut down valve
     public GameObject brokenValve;
+    public Animator animator;
     private SpriteRenderer fanSpriteRenderer; // Reference to the fan's SpriteRenderer
 
     private void Start()
@@ -23,8 +24,9 @@ public class FanCollision : MonoBehaviour
             {
                 // Destroy the item
                 Destroy(collision.gameObject);
-                brokenValve.SetActive(true);
-                fanSpriteRenderer.enabled = false;
+                animator.SetBool("isBroken", true);
+                //brokenValve.SetActive(true);
+                //fanSpriteRenderer.enabled = false;
 
             }
         }
