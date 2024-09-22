@@ -15,6 +15,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_LeftSideCheck;
     [SerializeField] private Transform m_RightSideCheck;
     [SerializeField] private Collider2D m_CrouchDisableCollider;
+    public Animator animator;
 
     const float k_GroundedRadius = .2f;
     const float k_OnWallRadius = .2f;
@@ -61,8 +62,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 m_Grounded = true;
                 m_doubleJumped = false;
-                if (!wasGrounded)
-                    OnLandEvent.Invoke();
+                animator.SetBool("onGround", true);
             }
         }
 
@@ -78,6 +78,19 @@ public class CharacterController2D : MonoBehaviour
             }
         }
         m_OnWall = onWall;
+        
+        if(m_Rigidbody2D.velocity.y < 0)
+        {
+            setAnimatorParam(false, true, false, false);
+        } 
+    }
+
+    private void setAnimatorParam(bool jumping, bool falling, bool doubleJumping, bool onGround)
+    {
+        animator.SetBool("jumping", jumping);
+        animator.SetBool("falling", falling);
+        animator.SetBool("doubleJumping", doubleJumping);
+        animator.SetBool("onGround", onGround);
     }
 
 
@@ -135,7 +148,7 @@ public class CharacterController2D : MonoBehaviour
         }
         else if (!m_Grounded)
         {
-            Debug.Log(m_Rigidbody2D.velocity.x);
+            //Debug.Log(m_Rigidbody2D.velocity.x);
             if (move > 0)
             {
                 if (m_Rigidbody2D.velocity.x < 3)
@@ -164,6 +177,7 @@ public class CharacterController2D : MonoBehaviour
         {
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            setAnimatorParam(true, false, false, false);
         }
         else if (!m_Grounded && jump)
         {
@@ -182,6 +196,7 @@ public class CharacterController2D : MonoBehaviour
                 m_doubleJumped = true;
                 m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+                animator.SetBool("doubleJumping", true );
             }
         }
     }
