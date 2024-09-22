@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ChestCode : MonoBehaviour
 {
-    public string correctCode = "1234"; // The correct code to open the chest
+    public string correctCode = "4321"; // The correct code to open the chest
     //public Text inputDisplay; // UI Text element to display the inputted code
     private string enteredCode = ""; // Stores the player's entered code
     private bool isChestOpen = false; // Track if the chest is already open
