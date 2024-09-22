@@ -8,6 +8,12 @@ public class PlayerTeleport : MonoBehaviour
     private List<GameObject> activeTeleporters = new List<GameObject>();
     public Animator animator;
     private Teleporter currentTeleporter;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private bool canTeleport = true;
 
@@ -43,6 +49,7 @@ public class PlayerTeleport : MonoBehaviour
     {
         Transform destination = currentTeleporter.GetDestination();
         transform.position = destination.position;
+
         Debug.Log("Teleported to: " + destination.name);
         animator.SetBool("isTeleporting", false);
     }
@@ -64,6 +71,5 @@ public class PlayerTeleport : MonoBehaviour
         {
             activeTeleporters.Remove(collision.gameObject); 
         }
-        Debug.Log("Active Teleporters: " + activeTeleporters);
     }
 }
