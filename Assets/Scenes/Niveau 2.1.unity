@@ -359,8 +359,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 180}
-  m_SizeDelta: {x: 350, y: 30}
+  m_AnchoredPosition: {x: 10.3, y: 94.4}
+  m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &292331234
 GameObject:
@@ -1090,7 +1090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 60.4}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &950242427
@@ -1395,29 +1395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd01014031fac9a46b7aa7e2eb93d567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 600
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_WhatIsWall:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_GroundCheck: {fileID: 1261077127}
-  m_CeilingCheck: {fileID: 139637849}
-  m_LeftSideCheck: {fileID: 965555076}
-  m_RightSideCheck: {fileID: 1125228000}
-  m_CrouchDisableCollider: {fileID: 0}
-  m_Grounded: 0
-  m_OnWall: 0
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!212 &1017683969
 SpriteRenderer:
   m_ObjectHideFlags: 0

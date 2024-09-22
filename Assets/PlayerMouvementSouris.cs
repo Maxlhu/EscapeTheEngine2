@@ -44,19 +44,19 @@ public class PlayerMovementSouris : MonoBehaviour
 
             float distance = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * targetPosition.x);
 
-            // Arrêter le mouvement si un mur est détecté
-            if (controller.m_OnWall)
-            {
-                isMoving = false; // Arrêter le mouvement en touchant un mur
-                horizontalMove = 0f;
-                StopMovement();
-            }
-            else if (distance < 0.05f)
-            {
-                isMoving = false;
-                horizontalMove = 0f;
-                StopMovement();
-            }
+            //// Arrêter le mouvement si un mur est détecté
+            //if (controller.m_OnWall)
+            //{
+            //    isMoving = false; // Arrêter le mouvement en touchant un mur
+            //    horizontalMove = 0f;
+            //    StopMovement();
+            //}
+            //else if (distance < 0.05f)
+            //{
+            //    isMoving = false;
+            //    horizontalMove = 0f;
+            //    StopMovement();
+            //}
 
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
         }
@@ -77,10 +77,11 @@ public class PlayerMovementSouris : MonoBehaviour
     // Fonction de saut
     void Jump()
     {
-        if (controller.m_Grounded)
+        if (controller.m_Grounded || controller.m_OnWall)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
-            animator.SetTrigger("Jump");
+            animator.SetTrigger("jumping");
+            Debug.Log("jumped");
             doubleJump = false;
         }
         else if (!doubleJump)
@@ -89,6 +90,7 @@ public class PlayerMovementSouris : MonoBehaviour
             rb.AddForce(new Vector2(0f, jumpForce));
             doubleJump = true;
             animator.SetTrigger("doubleJumping");
+            Debug.Log("double jumped");
         }
     }
 }
