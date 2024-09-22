@@ -546,7 +546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.27, y: -1.6}
+  m_AnchoredPosition: {x: 4.35, y: 2.89}
   m_SizeDelta: {x: 5.31, y: 2.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &678892078
@@ -4951,7 +4951,7 @@ SpriteRenderer:
   m_Size: {x: 32.57, y: 22.37597}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &840475723
@@ -5279,6 +5279,7 @@ MonoBehaviour:
   m_LeftSideCheck: {fileID: 0}
   m_RightSideCheck: {fileID: 1397839420}
   m_CrouchDisableCollider: {fileID: 0}
+  animator: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5592,7 +5593,7 @@ SpriteRenderer:
   m_Size: {x: 26.989998, y: 15.366376}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1600673401
