@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 0995fc311940644438b1223f8d792ac9
-=======
-guid: 98663c02b18287c4e9d1e2d576515b2e
->>>>>>> main
+guid: 173b0d13d569a2f40b0ceeb828a4ed37
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -99,7 +95,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "d\xE9corations_tuyaux_noirEtBlanc_0"
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 114
+        width: 123
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5144665568cac6048ae068f1975a88f8
+      internalID: 645550302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "d\xE9corations_tuyaux_noirEtBlanc_1"
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 130
+        width: 334
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61048de9cec6ef647b4e9d5a3369de7c
+      internalID: -1400132758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "d\xE9corations_tuyaux_noirEtBlanc_2"
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 149
+        width: 158
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997d545091bbd1f4795e8e39d3a3bb75
+      internalID: -1173147326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "d\xE9corations_tuyaux_noirEtBlanc_3"
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 324
+        width: 670
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce2e22a2d10db04c9f50d420f1131c8
+      internalID: -191447629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -110,7 +190,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "d\xE9corations_tuyaux_noirEtBlanc_0": 645550302
+      "d\xE9corations_tuyaux_noirEtBlanc_1": -1400132758
+      "d\xE9corations_tuyaux_noirEtBlanc_2": -1173147326
+      "d\xE9corations_tuyaux_noirEtBlanc_3": -191447629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

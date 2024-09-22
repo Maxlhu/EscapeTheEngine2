@@ -48,14 +48,14 @@ public class PlayerMovementSouris : MonoBehaviour
             if (controller.m_OnWall)
             {
                 isMoving = false; // Arrêter le mouvement en touchant un mur
-                horizontalMove = 0f;
-                StopMovement();
+                //horizontalMove = 0f;
+                //StopMovement();
             }
             else if (distance < 0.05f)
             {
                 isMoving = false;
-                horizontalMove = 0f;
-                StopMovement();
+                //horizontalMove = 0f;
+                //StopMovement();
             }
 
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
@@ -80,7 +80,7 @@ public class PlayerMovementSouris : MonoBehaviour
         if (controller.m_Grounded)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
-            animator.SetTrigger("Jump");
+            animator.SetTrigger("jumping");
             doubleJump = false;
         }
         else if (!doubleJump)

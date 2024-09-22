@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 0995fc311940644438b1223f8d792ac9
-=======
-guid: 98663c02b18287c4e9d1e2d576515b2e
->>>>>>> main
+guid: 62138d7708972124fbb855dfe45d9b20
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -99,7 +95,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "tuyauSp\xE9ciau_Spikes_niveau3_0"
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 90
+        width: 133
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559cfeae53e1f504c80acbd0bc0b2389
+      internalID: 528251123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tuyauSp\xE9ciau_Spikes_niveau3_1"
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 88
+        width: 134
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c02443ec12e3d24fad9697166ff488a
+      internalID: -470199449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tuyauSp\xE9ciau_Spikes_niveau3_2"
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 216
+        width: 332
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c9c94ef95aad2408243a8469c4f00d
+      internalID: 1479799898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tuyauSp\xE9ciau_Spikes_niveau3_3"
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 157
+        width: 329
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086558de4c88e7848a51f944dce227d2
+      internalID: -2028147743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -110,7 +190,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "tuyauSp\xE9ciau_Spikes_niveau3_0": 528251123
+      "tuyauSp\xE9ciau_Spikes_niveau3_1": -470199449
+      "tuyauSp\xE9ciau_Spikes_niveau3_2": 1479799898
+      "tuyauSp\xE9ciau_Spikes_niveau3_3": -2028147743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

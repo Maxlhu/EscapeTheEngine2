@@ -11,8 +11,8 @@ public class MovingPlatform : MonoBehaviour
     public Transform endPoint;
     public float speed = 1.5f;
     Vector2 targetPosition;
-
-
+   
+    
     int direction = 1;
     public GameObject movingPlatform;
 
@@ -32,15 +32,15 @@ public class MovingPlatform : MonoBehaviour
         if (Vector2.Distance(transform.position, endPoint.position) < .1f) targetPosition = startPoint.position;
 
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-
+        
     }
 
-
+    
     //pour voir les lignes de la plateforme.
     private void OnDrawGizmos()
     {
-
-        if (platform != null && startPoint != null && endPoint != null)
+        
+        if(platform != null && startPoint != null && endPoint != null)
         {
             Gizmos.DrawLine(platform.transform.position, startPoint.position);
             Gizmos.DrawLine(platform.transform.position, endPoint.position);
@@ -65,3 +65,4 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 }
+

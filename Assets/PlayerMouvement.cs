@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalMove = 1f;
     bool jump = false;
+    bool doubleJump = false;
     bool crouch = false;
 
     // Update is called once per frame
