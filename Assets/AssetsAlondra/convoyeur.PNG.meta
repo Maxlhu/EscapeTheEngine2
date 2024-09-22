@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 887ba2489f40f884daa6b5e5cb797703
-=======
-guid: 8f7bfda7124b2b947a28778a691c38c2
->>>>>>> c0eaf5612c52e9213f2004c64d2e40fff32a4a06
+guid: 07f33e94c85256a48ae6f543092a0e78
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -99,7 +95,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: convoyeur_0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 827
+        width: 1467
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64436ff72a3e9ec4f936351fd6090413
+      internalID: 119506090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -110,7 +127,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      convoyeur_0: 119506090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
