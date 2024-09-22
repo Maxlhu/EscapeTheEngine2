@@ -19,8 +19,9 @@ public class CharacterController2D : MonoBehaviour
     const float k_GroundedRadius = .2f; 
     const float k_OnWallRadius = .2f; 
     public bool m_Grounded;            
+    public  bool m_OnWall;
     private bool m_LeftOnWall;
-    private bool m_OnWall;
+
     private bool m_doubleJumped;
     const float k_CeilingRadius = .2f; 
     private Rigidbody2D m_Rigidbody2D;

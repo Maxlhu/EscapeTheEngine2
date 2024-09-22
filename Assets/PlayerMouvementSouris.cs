@@ -10,35 +10,33 @@ public class PlayerMovementSouris : MonoBehaviour
     private Vector2 targetPosition;
     private bool isMoving = false;
     private float horizontalMove = 0f;
-    private bool isFacingRight = true;
-    private Rigidbody2D rb;  // Référence au Rigidbody2D
-    public float jumpForce = 400f;  // Force de saut
+    private Rigidbody2D rb;
+    public float jumpForce = 400f;
     private bool doubleJump = false;
 
     void Start()
     {
-        // Obtenir le Rigidbody2D du joueur
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // Déplacement avec le clic gauche n'importe où dans la scène
+        // Déplacement avec clic gauche
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mouseWorldPosition3D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPosition3D.z = 0f;  // Assurer que Z reste à 0 dans le plan 2D
-            targetPosition = new Vector2(mouseWorldPosition3D.x, transform.position.y);  // Garder la même hauteur Y
+            mouseWorldPosition3D.z = 0f;
+            targetPosition = new Vector2(mouseWorldPosition3D.x, transform.position.y);
             isMoving = true;
         }
 
-        // Saut avec le clic droit
+        // Saut avec clic droit
         if (Input.GetMouseButtonDown(1))
         {
-            Jump();  // Appeler la fonction de saut lorsque le clic droit est détecté
+            Jump();
         }
 
-        // Déplacement du joueur
+        // Si le joueur se déplace
         if (isMoving)
         {
             float direction = targetPosition.x - transform.position.x;
@@ -46,11 +44,18 @@ public class PlayerMovementSouris : MonoBehaviour
 
             float distance = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * targetPosition.x);
 
-            if (distance < 0.05f)
+            // Arrêter le mouvement si un mur est détecté
+            if (controller.m_OnWall)
+            {
+                isMoving = false; // Arrêter le mouvement en touchant un mur
+                horizontalMove = 0f;
+                StopMovement();
+            }
+            else if (distance < 0.05f)
             {
                 isMoving = false;
                 horizontalMove = 0f;
-                StopMovement();  // Arrêter le mouvement immédiatement
+                StopMovement();
             }
 
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, false, false);
@@ -65,25 +70,25 @@ public class PlayerMovementSouris : MonoBehaviour
 
     void StopMovement()
     {
-        // Forcer l'arrêt immédiat en mettant la vélocité à zéro
+        // Arrêter immédiatement le mouvement en mettant la vélocité à zéro
         rb.velocity = Vector2.zero;
     }
 
-    // Fonction de saut et double saut
+    // Fonction de saut
     void Jump()
     {
-        if (controller.m_Grounded)  // Utilisation de ton système de vérification de ground
+        if (controller.m_Grounded)
         {
-            rb.AddForce(new Vector2(0f, jumpForce));  // Appliquer une force de saut
-            animator.SetTrigger("Jump");  // Déclencher l'animation de saut
-            doubleJump = false;  // Réinitialiser le double saut
+            rb.AddForce(new Vector2(0f, jumpForce));
+            animator.SetTrigger("Jump");
+            doubleJump = false;
         }
-        else if (!doubleJump)  // Si le joueur est en l'air, permettre un double saut
+        else if (!doubleJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0);  // Réinitialiser la vélocité verticale pour un double saut fluide
-            rb.AddForce(new Vector2(0f, jumpForce));  // Appliquer la force du double saut
-            doubleJump = true;  // Désactiver le double saut après usage
-            animator.SetTrigger("DoubleJump");  // Animation du double saut (si elle existe)
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.AddForce(new Vector2(0f, jumpForce));
+            doubleJump = true;
+            animator.SetTrigger("DoubleJump");
         }
     }
 }

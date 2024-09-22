@@ -1961,7 +1961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a168eb8b91e09e46b2a3a3551b8b6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: 
+  nextSceneName: startScene
 --- !u!1 &1636026425
 GameObject:
   m_ObjectHideFlags: 0
