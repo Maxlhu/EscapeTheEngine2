@@ -57,7 +57,7 @@ public class ChatCommandScript : MonoBehaviour
         if (command.ToLower() == "go")
         {
             Debug.Log("Go command received.");
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);  // Applique la vélocité
+            rb.velocity = new Vector2(moveSpeed * 2.5f, rb.velocity.y);  // Applique la vélocité
             hintText.text = "";  // Efface les indices
         }
         else if (command.ToLower() == "back")
