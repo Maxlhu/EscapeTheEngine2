@@ -23,25 +23,22 @@ public class PlayerMovementSouris : MonoBehaviour
 
     void Update()
     {
+        // Déplacement avec le clic gauche n'importe où dans la scène
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mouseWorldPosition3D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mouseWorldPosition = new Vector2(mouseWorldPosition3D.x, mouseWorldPosition3D.y);
-
-            RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero, Mathf.Infinity, groundLayer);
-
-            if (hit.collider != null)
-            {
-                targetPosition = hit.point;
-                isMoving = true;
-            }
+            mouseWorldPosition3D.z = 0f;  // Assurer que Z reste à 0 dans le plan 2D
+            targetPosition = new Vector2(mouseWorldPosition3D.x, transform.position.y);  // Garder la même hauteur Y
+            isMoving = true;
         }
-        
+
         // Saut avec le clic droit
         if (Input.GetMouseButtonDown(1))
         {
             Jump();  // Appeler la fonction de saut lorsque le clic droit est détecté
         }
+
+        // Déplacement du joueur
         if (isMoving)
         {
             float direction = targetPosition.x - transform.position.x;
@@ -57,7 +54,6 @@ public class PlayerMovementSouris : MonoBehaviour
             }
 
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, false, false);
-
         }
         else
         {
@@ -72,11 +68,11 @@ public class PlayerMovementSouris : MonoBehaviour
         // Forcer l'arrêt immédiat en mettant la vélocité à zéro
         rb.velocity = Vector2.zero;
     }
-    // Fonction de saut
+
     // Fonction de saut et double saut
     void Jump()
     {
-        if (controller.m_Grounded)  // Vérifier si le joueur est au sol avant de sauter
+        if (controller.m_Grounded)  // Utilisation de ton système de vérification de ground
         {
             rb.AddForce(new Vector2(0f, jumpForce));  // Appliquer une force de saut
             animator.SetTrigger("Jump");  // Déclencher l'animation de saut
