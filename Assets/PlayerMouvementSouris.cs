@@ -58,7 +58,7 @@ public class PlayerMovementSouris : MonoBehaviour
                 StopMovement();
             }
 
-            controller.Move(horizontalMove * Time.fixedDeltaTime, false, false, false);
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
         }
         else
         {
