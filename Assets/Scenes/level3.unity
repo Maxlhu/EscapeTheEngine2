@@ -317,7 +317,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20250511, y: 0.075231075}
+  m_Offset: {x: 0.067569375, y: 0.075231075}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -328,7 +328,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.0621605, y: 6.326379}
+  m_Size: {x: 6.638129, y: 6.326379}
   m_EdgeRadius: 0
 --- !u!212 &78524895
 SpriteRenderer:
@@ -2111,7 +2111,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.27909064, y: -0.030540228}
+  m_Offset: {x: 0.010802984, y: -0.030540228}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2122,7 +2122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.0957465, y: 6.4360795}
+  m_Size: {x: 6.559171, y: 6.4360795}
   m_EdgeRadius: 0
 --- !u!212 &968386948
 SpriteRenderer:
@@ -2255,7 +2255,7 @@ Transform:
   m_GameObject: {fileID: 977447981}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.33, y: -1.3, z: 0.057901323}
+  m_LocalPosition: {x: 4.46, y: -1.25, z: 0.057901323}
   m_LocalScale: {x: 0.1824964, y: 0.19887637, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2281,7 +2281,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977447981}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2306,7 +2306,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07666683, y: 0.07024729}
+  m_Offset: {x: 0.012872964, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2317,7 +2317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.839349, y: 6.3388166}
+  m_Size: {x: 0.9958301, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &977447985
 SpriteRenderer:
@@ -2378,7 +2378,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977447981}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2577,8 +2577,8 @@ Transform:
   m_GameObject: {fileID: 1074932471}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.402, y: -1.1198, z: 0.024035618}
-  m_LocalScale: {x: 0.24646406, y: 0.24424882, z: 1}
+  m_LocalPosition: {x: 4.402, y: -1.101, z: 0.024035618}
+  m_LocalScale: {x: 0.24646406, y: 0.24872589, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 121426671}
@@ -4333,7 +4333,7 @@ Transform:
   m_GameObject: {fileID: 1526662796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.43999976, y: -1.8, z: 0.057901323}
+  m_LocalPosition: {x: 0.5699999, y: -1.75, z: 0.057901323}
   m_LocalScale: {x: 0.18201016, y: 0.18286255, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4562,7 +4562,7 @@ Transform:
   m_GameObject: {fileID: 1534207849}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.08, y: -3.98, z: 0}
+  m_LocalPosition: {x: 7.1, y: -3.97, z: 0}
   m_LocalScale: {x: 0.35653165, y: 0.5609417, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6562,11 +6562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144524449538079201, guid: e53c1f35487fa5149a4ce86e02167278, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4799999
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 2144524449538079201, guid: e53c1f35487fa5149a4ce86e02167278, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6819999
+      value: -1.632
       objectReference: {fileID: 0}
     - target: {fileID: 2144524449538079201, guid: e53c1f35487fa5149a4ce86e02167278, type: 3}
       propertyPath: m_LocalPosition.z
