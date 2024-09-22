@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerTeleport : MonoBehaviour
 {
     private List<GameObject> activeTeleporters = new List<GameObject>();
+    public Animator animator;
+    private Teleporter currentTeleporter;
 
     void Update()
     {
@@ -16,18 +18,24 @@ public class PlayerTeleport : MonoBehaviour
 
             if (hit.collider != null && activeTeleporters.Contains(hit.collider.gameObject))
             {
-                Teleporter teleporter = hit.collider.GetComponent<Teleporter>();
-                Debug.Log("Teleporter: " + teleporter);
+                currentTeleporter = hit.collider.GetComponent<Teleporter>();
+                Debug.Log("Teleporter: " + currentTeleporter);
 
-                if (teleporter != null)
+                if (currentTeleporter != null)
                 {
-                    Transform destination = teleporter.GetDestination();
-                    transform.position = destination.position;
-                    Debug.Log("Teleported to: " + destination.name);
-
+                    animator.SetBool("isTeleporting", true);
+                    Invoke("TeleportPlayer", 0.5f);
                 }
             }
         }
+    }
+
+    void TeleportPlayer()
+    {
+        Transform destination = currentTeleporter.GetDestination();
+        transform.position = destination.position;
+        Debug.Log("Teleported to: " + destination.name);
+        animator.SetBool("isTeleporting", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,6 +56,5 @@ public class PlayerTeleport : MonoBehaviour
             activeTeleporters.Remove(collision.gameObject); 
         }
         Debug.Log("Active Teleporters: " + activeTeleporters);
-
     }
 }
