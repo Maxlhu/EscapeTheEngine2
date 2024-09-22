@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a0ec0178093c1d4193b3005a51d53e6
+guid: 91c9d0042f1c7044e897446e9405f055
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cadenas_43_0
+      name: tuyaux_valve_noirEtBlanc_0
       rect:
         serializedVersion: 2
-        x: 636
-        y: 251
-        width: 842
-        height: 1036
+        x: 2231
+        y: 1038
+        width: 984
+        height: 838
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 542493f3ebe73c541aa627292755942a
-      internalID: -36430312
+      spriteID: 20355fdce9bc64447a1dbed4d2a8cf4f
+      internalID: -370958502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuyaux_valve_noirEtBlanc_1
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 883
+        width: 380
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5a44d2ffa077c42a424def9ade8370
+      internalID: 1800904454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuyaux_valve_noirEtBlanc_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1647
+        width: 880
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a27cad6b457ce4eba7d61810419d34
+      internalID: 1444112724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuyaux_valve_noirEtBlanc_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 838
+        width: 646
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9b0ea3a01da7e4f9037a523a62458a
+      internalID: -2120254711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuyaux_valve_noirEtBlanc_4
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 147
+        width: 557
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e848bcb99a9aa43baf86015f107eda
+      internalID: 1769760023
       vertices: []
       indices: 
       edges: []
@@ -128,7 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cadenas_43_0: -36430312
+      tuyaux_valve_noirEtBlanc_0: -370958502
+      tuyaux_valve_noirEtBlanc_1: 1800904454
+      tuyaux_valve_noirEtBlanc_2: 1444112724
+      tuyaux_valve_noirEtBlanc_3: -2120254711
+      tuyaux_valve_noirEtBlanc_4: 1769760023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d3a79a1dc7d0eda4bbbd7caedede0b34
+guid: adfb7e5f9dec7d542811117e0ec7377b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cadenas_niveau4_0
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 407
+        width: 474
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16007c92641cfd449b342a90ab712de4
+      internalID: 662548388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +127,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cadenas_niveau4_0: 662548388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2cfc39fd754c1414e80dcef84d217486
+guid: 05304c024d1393241a11a976008d2c4c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: porte_ouverte_niveau4_0
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 379
+        width: 1377
+        height: 785
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9e5469062cb3f439376f0953c838c9
+      internalID: -1705214566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +127,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      porte_ouverte_niveau4_0: -1705214566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
