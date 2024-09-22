@@ -10,6 +10,7 @@ public class ChestCode : MonoBehaviour
 
     public GameObject chestClosedSprite; // The sprite for the closed chest
     public GameObject chestOpenSprite; // The sprite for the open chest
+    public GameObject leverSprite;
 
     public GameObject circle1;
     public GameObject circle2;
@@ -21,6 +22,7 @@ public class ChestCode : MonoBehaviour
         // Make sure the chest starts closed
         chestOpenSprite.SetActive(false);
         chestClosedSprite.SetActive(true);
+        leverSprite.SetActive(false);
         circle1.SetActive(false);
         circle2.SetActive(false);
         circle3.SetActive(false);
@@ -83,6 +85,11 @@ public class ChestCode : MonoBehaviour
         // Change the chest's visual state
         chestClosedSprite.SetActive(false);
         chestOpenSprite.SetActive(true);
+        leverSprite.SetActive(true);
+        circle1.SetActive(false);
+        circle2.SetActive(false);
+        circle3.SetActive(false);
+        circle4.SetActive(false);
 
         //// Optionally disable further input
         //inputDisplay.text = "Unlocked";
